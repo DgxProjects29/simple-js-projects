@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="simple-counter.js"></script>
+    <script defer src="watch-timer.js"></script>
+    <title>Counter-Watch</title>
+  </head>
+  <body>
+    <div id="mainbox">
+      <!-- Simple counter -->
+      <div class="mainbox__slide" id="simple-counter">
+        <div class="slide__title">
+          <span>Simple Counter</span>
+        </div>
+
+        <div class="slide__content">
+          <div class="digit-display" id="simple-counter-number">0</div>
+          <div class="slide__content__buttons" id="counter-buttons">
+            <button class="base-button">Decrease</button>
+            <button class="base-button">Reset</button>
+            <button class="base-button">Increase</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Watch timer -->
+      <div class="mainbox__slide" id="timer">
+        <div class="slide__title">
+          <span>Timer</span>
+        </div>
+
+        <div class="slide__content">
+          <div class="digit-display" id="timer-display">00 : 00</div>
+          <div class="slide-container">
+            <input
+              type="range"
+              min="0"
+              max="180"
+              value="0"
+              class="slider"
+              id="timer-slider"
+            />
+          </div>
+          <div class="slide__content__buttons" id="timer-buttons">
+            <button class="base-button" id="start-timer">Play</button>
+            <button class="base-button" id="stop-timer">Stop</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

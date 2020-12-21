@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+.sidebar--active .sidebar__links{
+    transform: translateX(0%);
+}
+
+#hamburger-icon{
+    cursor: pointer;
+}
+
+.sidebar__links{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 50%;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+}
+
+.sidebar__links a:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+.sidebar__links a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    padding: 15px 10px;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid #30A5D7;
+}
+
+.sidebar__close{
+    font-size: 1.5rem;
+    color: black;
+    padding: 15px 20px 10px 10px;
+    text-align: right;
+}
+
+.sidebar__close i{
+    cursor: pointer;
+}
+
+#main-box{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+#header__title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 2rem;
+}
+
+#hamburger-icon{
+    display: none;
+}
+
+#header__nav ul li{
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #30A5D7;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#header__nav ul li a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+#color-section{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.color-rect{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.color-rect span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+}
+
+
+@media (max-width: 720px) {
+    #header__nav ul li{
+        display: none;
+    }
+
+    #color-section{
+        flex-direction: column;
+    }
+
+    #hamburger-icon{
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    html{
+        font-size: 12px;   
+    }
+}
