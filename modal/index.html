@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e815ae3c7a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Modal</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Modal Login</h1>
+    </header>
+    <main id="main-box">
+        <div class="main-box__card">
+            <p class="userpass-title">Your Username</p>
+            <p class="userpass-placeholder" id="userholder">DpTest</p>
+            <p class="userpass-title">Your Password</p>
+            <p class="userpass-placeholder" id="passholder">1234admin1234</p>
+            <button id="open-modal-button">Login</button>
+        </div>
+    </main>
+
+    <div class="simple-modal" id="simple-modal">
+
+        <div class="simple-modal-content">
+            
+            <div class="simple-modal-header">
+                <h1>Login</h1>
+                <button id="btn-close"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="modal-input-container">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username-input">
+            </div>
+
+            <div class="modal-input-container">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password-input">
+            </div>
+
+            <button id="modal-login-button">Login</button>
+        </div>
+
+    </div>
+</body>
+</html>
