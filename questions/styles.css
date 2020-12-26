@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rich-black-fogra-39: #0a0908;
+  --gunmetal: #22333b;
+  --cultured: #f2f4f3;
+  --grullo: #a9927d;
+  --umber: #5e503f;
+
+  --text-color-1: #333333;
+  --text-color-2: #666666;
+  --text-color-3: #888888;
+  --text-color-3: #a9a9a9;
+
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  --h1-font-size: clamp(1.5rem, 1.3846rem + 0.5128vw, 2rem);
+  --body-font-size: clamp(1rem, 0.9712rem + 0.1282vw, 1.125rem);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--cultured);
+}
+
+#main-box {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.questions-container {
+  width: 80vw;
+  max-width: 800px;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: var(--text-color-1);
+  padding: 0 5%;
+  font-size: var(--h1-font-size);
+  padding: 1%;
+}
+
+.underline {
+  height: 0.25rem;
+  width: 5rem;
+  background: var(--umber);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question {
+  background: var(--cultured);
+  border-radius: 0.5rem;
+  box-shadow: var(--light-shadow);
+  /* padding: 4%; */
+  padding: 2rem;
+  margin-bottom: 4%;
+}
+
+.question-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-title p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--body-font-size);
+  color: var(--gunmetal);
+}
+
+.question-text{
+    margin-top: 3%;
+    display: none;
+}
+
+.question-text-active{
+    display: block;
+}
+
+.question-text p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--body-font-size);
+  color: var(--text-color-2);
+}
+
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: var(--grullo);
+  outline: none;
+}
