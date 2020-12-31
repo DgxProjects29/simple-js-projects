@@ -10,6 +10,7 @@
 :root {
   --header-color: #373841;
   --secondary-color: #3b879f;
+  --secondary-color-light: #4197b1;
 
   --primary-text-color: #333333;
   --secondary-text-color: #83888b;
@@ -96,6 +97,10 @@ h1 {
   cursor: pointer;
 }
 
+#open-modal-button:hover{
+  background-color: var(--secondary-color-light);
+}
+
 /* Modal Styles */
 
 .simple-modal {
@@ -110,6 +115,13 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  animation-name: animatetop;
+  animation-duration: 0.5s
+}
+
+@keyframes animatetop {
+  from {opacity:0}
+  to {opacity:1}
 }
 
 .active-simple-modal {

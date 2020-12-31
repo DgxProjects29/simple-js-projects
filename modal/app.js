@@ -13,5 +13,12 @@ document.getElementById("btn-close").addEventListener("click", () => {
 document.getElementById("modal-login-button").addEventListener("click", () => {
   document.getElementById("userholder").innerHTML = usernameInput.value;
   document.getElementById("passholder").innerHTML = passwordInput.value;
+  usernameInput.value = "";
+  passwordInput.value = "";
   loginModal.classList.remove("active-simple-modal");
 });
+
+/* window.onclick = () => {
+  loginModal.classList.remove("active-simple-modal");
+};
+ */

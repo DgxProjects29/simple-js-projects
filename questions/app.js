@@ -18,12 +18,14 @@ questions.forEach((question) => {
 
   questionButton.addEventListener("click", () => {
     const questionTextClassList = questionText.classList;
+
     if (!questionTextClassList.contains("question-text-active")) {
-      questionTextClassList.add("question-text-active");
       iconTag.classList.replace("fa-chevron-down", "fa-chevron-up");
     } else {
-      questionTextClassList.remove("question-text-active");
       iconTag.classList.replace("fa-chevron-up", "fa-chevron-down");
     }
+    
+    questionTextClassList.toggle("question-text-active")
+
   });
 });

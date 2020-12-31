@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rich-black-fogra-39: #0a0908;
+  --gunmetal: #22333b;
+  --cultured: #f2f4f3;
+  --grullo: #a9927d;
+  --umber: #5e503f;
+
+  --text-color-1: #212529;
+  --text-color-2: #495057;
+  --text-color-3: #adb5bd;
+  --text-color-3: #dee2e6;
+
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  --h1-font-size: clamp(2.2rem, 2.1308rem + 0.3077vw, 2.5rem);
+  --body-font-size: clamp(1rem, 0.9712rem + 0.1282vw, 1.125rem);
+}
+
+body {
+  background-color: var(--cultured);
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  padding: 50px;
+}
+
+.main-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: var(--umber);
+  padding: 0 5%;
+  font-size: var(--h1-font-size);
+  padding: 15px;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.base-button {
+  text-decoration: none;
+  background-color: inherit;
+  border: 0.1rem solid var(--umber);
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+  margin: 0.5rem 0.5rem;
+  cursor: pointer;
+  outline: none;
+
+  font-family: "Open Sans", sans-serif;
+  color: var(--grullo);
+  font-size: var(--body-font-size);
+
+  transition: all 0.3s linear;
+}
+
+.base-button:hover{
+  background-color: var(--grullo);
+  color: white;
+}
+
+.menu-wrapper {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  margin-bottom: 50px;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 1rem;
+  width: 85%;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.item-price{
+    color: var(--umber);
+}
+
+.item-name{
+    color: var(--text-color-1);
+}
+
+.menu-header > h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: var(--body-font-size);
+}
+
+
+.menu-photo {
+  height: 150px;
+  object-fit: cover;
+  border: 0.2rem solid var(--grullo);
+  border-radius: 0.5rem;
+}
+
+.menu-item-text {
+  padding: 5px;
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color-2);
+  font-size: 0.875rem
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .menu-container {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  .menu-item {
+    flex-direction: column;
+  }
+}
