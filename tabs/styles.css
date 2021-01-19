@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ash-gray: #cad2c5;
+  --dark-sea-green: #84a98c;
+  --light-sea-green: #bcdac2;
+  --hookers-green: #52796f;
+  --dark-slate-gray: #354f52;
+  --charcoal: #2f3e46;
+
+  --bg-color: #f7f9f9;
+
+  --gray-clr-1: #212529;
+  --gray-clr-2: #495057;
+  --gray-clr-3: #adb5bd;
+  --gray-clr-4: #dee2e6;
+
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+}
+
+html {
+  background-color: var(--bg-color);
+}
+
+.main-section {
+  padding: 5rem 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  padding: 0.5rem 0.1rem;
+}
+
+.header-desc {
+  color: var(--gray-clr-2);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media (min-width: 950px){
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+.section-center {
+  max-width: 1100px;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.about-img-container img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  height: 20rem;
+}
+
+@media (max-width: 950px){
+  .about-img-container {
+    margin-bottom: 2rem;
+  }
+}
+
+.tab-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tab-item {
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: var(--ash-gray);
+  padding: 0.9rem 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: all linear 0.3s
+}
+
+.tab-item:hover:not(.active-tab-item) {
+  background: var(--light-sea-green);
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: white;
+  border-radius: 1.3rem;
+}
+
+.active-tab-item {
+  background-color: white;
+}
+
+.about-item-container{
+  padding: 1.5rem 1rem;
+}
+
+.about-item__title{
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.about-item__content{
+  color: var(--gray-clr-2);
+}
